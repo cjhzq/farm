@@ -1,0 +1,146 @@
+loadstring(game:HttpGet(('https://pastebin.com/raw/jhDGXjgh'),true))()
+    
+
+Equip = false
+Lift = false
+coroutine.wrap(function()
+  while wait(0.6) do
+    if Lift then
+    wait(0.6)
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+            if v.Name == "Double Weight" then
+                v:Activate()
+                
+            end
+
+end
+end
+
+if Equip then
+    wait()
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+            if v.Name == "Double Weight" then
+                v.Parent = game.Players.LocalPlayer.Character
+                
+            end
+end
+end 
+end
+end)()
+
+
+local VLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vep1032/VepStuff/main/VL"))()
+
+local s = VLib:Window("Charlie Farm", "Boxing Simulator 2", "PRO")
+
+local ss = s:Tab("Farming")
+
+local char = game.Players.LocalPlayer.Character
+
+ss:Toggle("Equip",function(t)
+Equip = t
+end)
+
+ss:Toggle("Lift",function(t)
+Lift = t
+end)
+
+ss:Toggle("Lock Player",function(t)
+    if t then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+elseif not t then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+    end
+end)
+
+ss:Button("Delete HUD",function(t)
+game:GetService("Players").LocalPlayer.PlayerGui.HUD:Destroy()
+end)
+
+ss:Button("Delete Rumble",function(t)
+game.ReplicatedFirst.TourneyQ:Destroy()
+end)
+
+ss:Button("Less Ping",function(t)
+    			local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
+	local g = game
+	local w = g.Workspace
+	local l = g.Lighting
+	local t = w.Terrain
+	t.WaterWaveSize = 0
+	t.WaterWaveSpeed = 0
+	t.WaterReflectance = 0
+	t.WaterTransparency = 0
+	l.GlobalShadows = false
+	l.FogEnd = 9e9
+	l.Brightness = 0
+	settings().Rendering.QualityLevel = "Level01"
+	for i,v in pairs(g:GetDescendants()) do
+		if v:IsA("Part") or v:IsA() or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+			v.Material = "Plastic"
+			v.Reflectance = 0
+		elseif v:IsA("Decal") and decalsyeeted then
+			v.Transparency = 1
+		elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+			v.Lifetime = NumberRange.new(0)
+		elseif v:IsA("Explosion") then
+			v.BlastPressure = 1
+			v.BlastRadius = 1
+		end
+	end
+	for i,e in pairs(l:GetChildren()) do
+		if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+			e.Enabled = false
+		end
+	end
+
+	
+	local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
+	local g = game
+	local w = g.Workspace
+	local l = g.Lighting
+	local t = w.Terrain
+	t.WaterWaveSize = 0
+	t.WaterWaveSpeed = 0
+	t.WaterReflectance = 0
+	t.WaterTransparency = 0
+	l.GlobalShadows = false
+	l.FogEnd = 9e9
+	l.Brightness = 0
+	settings().Rendering.QualityLevel = "Level01"
+	for i,v in pairs(g:GetDescendants()) do
+		if v:IsA("Part") or v:IsA() or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+			v.Material = "Plastic"
+			v.Reflectance = 0
+		elseif v:IsA("Decal") and decalsyeeted then
+			v.Transparency = 1
+		elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+			v.Lifetime = NumberRange.new(0)
+		elseif v:IsA("Explosion") then
+			v.BlastPressure = 1
+			v.BlastRadius = 1
+		end
+	end
+	for i,e in pairs(l:GetChildren()) do
+		if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+			e.Enabled = false
+		end
+	end
+end)
+
+ss:Button("Counters",function(t)
+loadstring(game:HttpGet('https://pastebin.com/raw/91Thkn29'))()
+end)
+
+ss:Button("Anti Afk",function(t)
+local vu = game:GetService("VirtualUser")
+	game:GetService("Players").LocalPlayer.Idled:connect(function()
+		vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		wait(1)
+		vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+end)
+
+ss:Button("Tp Rumble",function(t)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1990.9436, 230, -5295.2124)
+end)
